@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Pro - Dashboard Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <circle cx="6" cy="8" r="1.5" fill="#3b82f6"></circle>
+                        <circle cx="6" cy="16" r="1.5" fill="#3b82f6"></circle>
+                    </svg>
+                    <span>josimar celular</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <span class="menu-title">PRINCIPAL</span>
+                    <a href="#" id="nav-resumen" class="menu-item active">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Resumen
+                    </a>
+                    <a href="#" id="nav-productos" class="menu-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        Productos
+                    </a>
+                    <div class="menu-item-group">
+                        <a href="#" id="nav-ordenes" class="menu-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Órdenes
+                            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-left: auto; transition: transform 0.3s;">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="submenu" id="submenu-ordenes"
+                            style="display: none; flex-direction: column; padding-left: 42px; margin-bottom: 6px;">
+                            <a href="#" id="nav-ventas" class="submenu-item"
+                                style="color: #94a3b8; text-decoration: none; font-size: 14px; padding: 8px 0; transition: color 0.2s;">Ventas</a>
+                            <a href="#" id="nav-compras" class="submenu-item"
+                                style="color: #94a3b8; text-decoration: none; font-size: 14px; padding: 8px 0; transition: color 0.2s;">Compras</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" id="nav-cierre" class="menu-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Cierre del Día
+                </a>
+            </div>
+
+            <div class="menu-section">
+                <span class="menu-title">ADMINISTRACIÓN</span>
+                <div class="menu-item-group">
+                    <a href="#" class="menu-item" id="nav-ajustes">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 1 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        Ajustes
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-left: auto; transition: transform 0.3s;">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="submenu" id="submenu-ajustes"
+                        style="display: none; flex-direction: column; padding-left: 42px; margin-bottom: 6px;">
+                        <a href="#" class="submenu-item" id="nav-usuarios"
+                            style="color: #94a3b8; text-decoration: none; font-size: 14px; padding: 8px 0; transition: color 0.2s;">
+                            Usuarios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <nav class="topbar">
+                <div class="topbar-search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="global-search-input" placeholder="Buscar productos, órdenes...">
+                </div>
+                <div class="topbar-actions">
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Carlos&background=3b82f6&color=fff&rounded=true&bold=true"
+                            alt="User Avatar" class="avatar">
+                        <div class="user-info">
+                            <span class="user-name">Carlos</span>
+                            <span class="user-role">Administrador</span>
+                        </div>
+                    </div>
+                    <button id="logout-btn" class="btn-logout-topbar" title="Cerrar Sesión">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <main class="dashboard-content">
+                <div class="dashboard-header">
+                    <div>
+                        <h1 class="page-title" id="page-title-text">Resumen Ejecutivo</h1>
+                        <p class="page-subtitle" id="page-subtitle-text">Vista general de todos los módulos y alertas
+                            activas.</p>
+                    </div>
+                    <div class="date-chip" id="current-date">
+                        <!-- Date inserted via JS -->
+                    </div>
+                </div>
+
+                <!-- Vista Resumen -->
+                <div id="view-resumen" class="view-section">
+                    <div class="metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gold_grad)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div class="metric-info">
+                                <div class="metric-title">Total de Activos</div>
+                                <div class="metric-value"><span id="metric-total-activos">0</span><span
+                                        class="trend up">Stock Total</span></div>
+                            </div>
+                        </div>
+                        <div class="metric-card alert-card">
+                            <div class="metric-icon alert-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div class="metric-info">
+                                <div class="metric-title">Alertas de Stock</div>
+                                <div class="metric-value"><span id="metric-alertas-stock">0</span><span
+                                        class="trend down">Críticos / Bajos</span></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#gold_grad)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="metric-info">
+                                <div class="metric-title">Valor Estimado</div>
+                                <div class="metric-value"><span id="metric-valor-total">$0.00</span><span
+                                        class="trend up">Valor Inventario</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Distribución por Marcas -->
+                    <div id="brand-distribution-container" style="margin-top: 24px;">
+                        <h3
+                            style="font-size: 18px; margin-bottom: 16px; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FDE047"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                            </svg>
+                            Distribución por Marcas
+                        </h3>
+                        <div id="brand-grid"
+                            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+                            <!-- Dinámico -->
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: var(--card-bg); padding: 40px; border-radius: 24px; border: 1px solid var(--card-border); text-align: center; margin-top: 20px;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--gold-main)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-bottom: 20px; opacity: 0.8;">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 12px;">Bienvenido a josimar celular
+                        </h3>
+                        <p style="color: var(--text-sec); font-size: 16px;">Selecciona la pestaña de "Productos" en el
+                            menú para administrar el inventario.</p>
+                    </div>
+                </div>
+
+                <!-- Vista Productos -->
+                <div id="view-productos" class="view-section" style="display: none;">
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2>Inventario de Productos</h2>
+                            <div style="display: flex; gap: 12px; align-items: center;">
+                                <select id="filtro-marca-inventario" class="select-premium"
+                                    style="min-width: 160px; height: 42px; border-radius: 12px; padding: 0 16px;">
+                                    <option value="all">Todas las Marcas</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Samsung">Samsung</option>
+                                    <option value="ZTE">ZTE</option>
+                                    <option value="Xiaomi">Xiaomi</option>
+                                    <option value="Motorola">Motorola</option>
+                                    <option value="Nokia">Nokia</option>
+                                    <option value="Huawei">Huawei</option>
+                                    <option value="Oppo">Oppo</option>
+                                </select>
+                                <button id="btn-nuevo-registro" class="btn-premium"
+                                    onclick="window.open('nuevo_registro.html', '_blank')">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                    <span>Añadir Registro</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Producto / Descripción</th>
+                                        <th>Marca</th>
+                                        <th>Categoría</th>
+                                        <th>Existencias</th>
+                                        <th>Valor Unitario</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inventory-body">
+                                    <!-- Data populated via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vista Órdenes - Ventas -->
+                <div id="view-ventas" class="view-section" style="display: none;">
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2>Registro de Ventas</h2>
+                            <button class="btn-premium" id="btn-nueva-venta">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                <span>Nueva Venta</span>
+                            </button>
+                        </div>
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Venta</th>
+                                        <th>Cliente</th>
+                                        <th>Producto(s)</th>
+                                        <th>Cant.</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ventas-body">
+                                    <tr>
+                                        <td colspan="6"
+                                            style="text-align: center; padding: 40px; color: var(--text-sec);">
+                                            No hay ventas registradas actualmente.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vista Cierre del Día -->
+                <div id="view-cierre" class="view-section" style="display: none;">
+                    <div class="content-section">
+                        <div
+                            style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 32px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; margin-bottom: 24px;">
+                            <div
+                                style="position: absolute; top: -50%; right: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);">
+                            </div>
+                            <div style="z-index: 1;">
+                                <h2
+                                    style="font-size: 24px; font-weight: 500; margin-bottom: 8px; color: var(--text-sec);">
+                                    Total Recaudado Hoy (<span id="fecha-cierre-hoy"></span>)</h2>
+                                <div id="cierre-total-monto"
+                                    style="font-size: 48px; font-weight: 700; color: #10b981; font-family: 'Space Grotesk', sans-serif; letter-spacing: -1px;">
+                                    $0.00</div>
+                                <p style="color: #94a3b8; margin-top: 8px; font-size: 14px;"><span
+                                        id="cierre-total-ventas-count">0</span> transacciones registradas hoy.</p>
+                            </div>
+                            <div
+                                style="width: 80px; height: 80px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); display: flex; align-items: center; justify-content: center; z-index: 1; border: 1px solid rgba(16, 185, 129, 0.2);">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10b981"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="section-header">
+                            <div>
+                                <h2 class="section-title">Detalle de Ventas del Día</h2>
+                                <p class="section-subtitle">Listado de transacciones correspondientes al cuadre actual.
+                                </p>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.05); padding: 8px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                                <span style="font-size: 13px; color: var(--text-sec); font-weight: 500;">Filtrar por
+                                    Fecha:</span>
+                                <input type="date" id="cierre-fecha-filtro"
+                                    style="background: transparent; border: none; color: #fff; font-size: 14px; outline: none; cursor: pointer; color-scheme: dark;">
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Venta</th>
+                                        <th>Cliente</th>
+                                        <th>Producto(s)</th>
+                                        <th>Cant.</th>
+                                        <th>Monto Unitario</th>
+                                        <th>Subtotal</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cierre-body">
+                                    <tr>
+                                        <td colspan="7"
+                                            style="text-align: center; padding: 40px; color: var(--text-sec);">
+                                            No hay ventas registradas el día seleccionado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vista Gestión de Usuarios -->
+                <div id="view-usuarios" class="view-section" style="display: none;">
+                    <div class="content-section">
+                        <div class="section-header">
+                            <div>
+                                <h2 class="section-title">Gestión de Usuarios</h2>
+                                <p class="section-subtitle">Administra los accesos y roles del sistema.</p>
+                            </div>
+                            <button class="btn-premium" id="btn-nuevo-usuario">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="8.5" cy="7" r="4"></circle>
+                                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                                    <line x1="17" y1="11" x2="23" y2="11"></line>
+                                </svg>
+                                <span>Agregar Usuario</span>
+                            </button>
+                        </div>
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>Usuario</th>
+                                        <th>Email / ID</th>
+                                        <th>Rol</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="usuarios-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vista Órdenes - Compras -->
+                <div id="view-compras" class="view-section" style="display: none;">
+                    <div class="content-section">
+                        <div class="section-header">
+                            <h2>Registro de Compras (Proveedores)</h2>
+                            <button id="btn-nueva-compra" class="btn-premium">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                <span>Nueva Compra</span>
+                            </button>
+                        </div>
+                        <div class="table-container">
+                            <table class="inventory-table">
+                                <thead>
+                                    <tr>
+                                        <th>Orden de Compra</th>
+                                        <th>Proveedor</th>
+                                        <th>Fecha Estimada</th>
+                                        <th>Costo Operativo</th>
+                                        <th>Estado Logístico</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5"
+                                            style="text-align: center; padding: 40px; color: var(--text-sec);">
+                                            No hay órdenes de compra activas.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div> <!-- Close main-wrapper -->
+    </div> <!-- Close dashboard-layout -->
+
+
+
+    <!-- Modal Nuevo Usuario -->
+    <div id="modal-usuario" class="modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(10px);">
+        <div class="form-card" style="max-width: 450px; width: 90%;">
+            <div class="form-header">
+                <div class="icon-container">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                        <line x1="17" y1="11" x2="23" y2="11"></line>
+                    </svg>
+                </div>
+                <div>
+                    <h1 style="font-size: 20px;">Nuevo Usuario</h1>
+                    <p>Configura el acceso al sistema.</p>
+                </div>
+            </div>
+            <form id="user-form">
+                <div style="display: grid; gap: 16px;">
+                    <div class="input-group">
+                        <label>Nombre de Usuario</label>
+                        <input type="text" id="userName" placeholder="Ej: Juan Pérez" required
+                            style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 8px;">
+                    </div>
+                    <div class="input-group">
+                        <label>Email o Identificador</label>
+                        <input type="text" id="userEmail" placeholder="juan@ejemplo.com" required
+                            style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 8px;">
+                    </div>
+                    <div class="input-group">
+                        <label>Rol del Usuario</label>
+                        <select id="userRole" class="select-premium" style="width: 100%;">
+                            <option value="Administrador">Administrador</option>
+                            <option value="Invitado">Invitado</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="userPass" placeholder="••••••••" required
+                            style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 8px;">
+                    </div>
+                </div>
+                <div class="form-actions" style="margin-top: 24px;">
+                    <button type="button" id="btn-cancel-user" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Registrar Usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Cambiar Contraseña -->
+    <div id="modal-password" class="modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(10px);">
+        <div class="form-card" style="max-width: 400px; width: 90%;">
+            <div class="form-header">
+                <div class="icon-container"
+                    style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 style="font-size: 20px;">Cambiar Contraseña</h1>
+                    <p id="password-modal-user-name"
+                        style="color: var(--gold-main); font-weight: 500; margin-top: 4px;">Usuario</p>
+                </div>
+            </div>
+            <form id="password-form">
+                <input type="hidden" id="passwordUserId">
+                <div style="display: grid; gap: 16px;">
+                    <div class="input-group">
+                        <label>Nueva Contraseña</label>
+                        <div style="position: relative;">
+                            <input type="password" id="newPasswordInput" placeholder="Ingresa la nueva clave" required
+                                style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 12px; border-radius: 8px; padding-right: 48px;">
+                            <button type="button" id="togglePasswordVisibility" title="Mostrar contraseña"
+                                style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-sec); display: flex; align-items: center; justify-content: center; padding: 4px;">
+                                <svg id="eyeIconOff" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                                    </path>
+                                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                                </svg>
+                                <svg id="eyeIconOn" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" style="display: none;">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions" style="margin-top: 24px;">
+                    <button type="button" id="btn-cancel-password" class="btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script>
+        // Update current date
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', options);
+    </script>
+</body>
+
+</html>
