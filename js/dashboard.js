@@ -118,12 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cargar datos dummy para el inventario inicial en LocalStorage
-    const initialData = [
-        { id: 'LUX-101', name: 'MacBook Pro M3 Max 16"', brand: 'Apple', category: 'Hardware Elite', stock: 15, price: '$3,499.00', status: 'in-stock', statusLabel: 'Óptimo' },
-        { id: 'LUX-102', name: 'Monitor Pro Display XDR', brand: 'Apple', category: 'Visual / Diseño', stock: 3, price: '$4,999.00', status: 'low-stock', statusLabel: 'Advertencia' },
-        { id: 'LUX-103', name: 'Z Flip 5', brand: 'Samsung', category: 'Celular', stock: 42, price: '$999.00', status: 'in-stock', statusLabel: 'Óptimo' },
-    ];
+    // Iniciar con inventario vacío
+    const initialData = [];
 
     // Lista maestra de marcas para visibilidad constante
     const masterBrands = ['Apple', 'Samsung', 'ZTE', 'Xiaomi', 'Motorola', 'Nokia', 'Huawei', 'Oppo'];
