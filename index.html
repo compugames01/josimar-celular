@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPUGAMES | Faith: Erudition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Full Screen Loading Overlay -->
+    <div class="loader-wrapper" id="page-loader">
+        <div class="loader-content">
+            <svg class="loader-logo" viewBox="0 0 100 100" fill="white">
+                <path d="M50 5 L60 25 L85 25 L65 40 L75 65 L50 50 L25 65 L35 40 L15 25 L40 25 Z" />
+                <rect x="49" y="25" width="2" height="60" />
+                <rect x="40" y="70" width="20" height="1" />
+            </svg>
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+
+    <div class="background-overlay"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="#" data-translate="home">HOME</a>
+                <a href="#" data-translate="story">STORY</a>
+                <a href="#" data-translate="character">CHARACTER</a>
+            </div>
+
+            <div class="logo-container">
+                <div class="main-logo-wrapper">
+                    <svg class="main-logo" viewBox="0 0 100 100" fill="white" style="height: 60px; width: 60px;">
+                        <path d="M50 5 L60 25 L85 25 L65 40 L75 65 L50 50 L25 65 L35 40 L15 25 L40 25 Z" />
+                        <rect x="49" y="25" width="2" height="60" />
+                        <rect x="40" y="70" width="20" height="1" />
+                    </svg>
+                </div>
+                <button class="mobile-star-menu" id="mobile-menu-btn">
+                    <i class="fas fa-star"></i>
+                </button>
+            </div>
+
+            <div class="nav-right">
+                <a href="#" data-translate="program">PROGRAM</a>
+                <a href="#" data-translate="about_us">ABOUT US</a>
+                <a href="#" data-translate="claim">CLAIM</a>
+                <button class="signup-btn-nav" data-translate="sign_up"
+                    onclick="window.location.href='login.html'">サインアップ</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+        <div class="mobile-nav-links">
+            <a href="#" data-translate="home">HOME</a>
+            <a href="#" data-translate="story">STORY</a>
+            <a href="#" data-translate="character">CHARACTER</a>
+            <a href="#" data-translate="program">PROGRAM</a>
+            <a href="#" data-translate="about_us">ABOUT US</a>
+            <a href="#" data-translate="claim">CLAIM</a>
+            <button class="signup-btn-nav mobile-mode" data-translate="sign_up"
+                onclick="window.location.href='login.html'">サインアップ</button>
+        </div>
+
+        <div class="mobile-social-icons">
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/tom126861/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Tombendingo" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/fidel-tomas-monteza-510b1583/" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <main class="hero">
+        <!-- Vertical Text Left -->
+        <div class="vertical-text-left">
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>P</span>
+            <span>U</span>
+            <span>G</span>
+            <span>A</span>
+            <span>M</span>
+            <span>E</span>
+            <span>S</span>
+        </div>
+
+        <!-- Vertical Social Icons Right -->
+        <div class="social-icons-right">
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/tom126861/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Tombendingo" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/fidel-tomas-monteza-510b1583/" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Hero Content Center -->
+        <div class="hero-center-container">
+            <div class="hero-image-wrapper">
+                <div class="hero-image-mask">
+                    <img src="hero-bg.png" alt="Hero Background" class="hero-img">
+                    <div class="hero-overlay-dark"></div>
+                </div>
+
+                <div class="hero-content">
+                    <h1 class="main-title">COMPUGAMES</h1>
+                    <div class="subtitle-divider">
+                        <span class="line"></span>
+                        <h2 class="sub-title" data-translate="subtitle">HOLA:BIENVENIDO</h2>
+                        <span class="line"></span>
+                    </div>
+                    <button class="signup-btn-hero" data-translate="sign_up"
+                        onclick="window.location.href='login.html'">サインアップ</button>
+                </div>
+
+                <div class="claw-marks"></div>
+            </div>
+        </div>
+
+
+        <!-- Available On Bottom Left -->
+        <div class="available-on">
+            <p data-translate="available_on">AVAILABLE ON :</p>
+            <div class="platform-icons">
+                <i class="fab fa-xbox"></i>
+                <i class="fab fa-playstation"></i>
+                <span>PS5</span>
+            </div>
+        </div>
+
+        <!-- Language Selector Bottom Right -->
+        <div class="language-selector">
+            <i class="fas fa-globe"></i>
+            <select id="lang-switch">
+                <option value="es">ESP</option>
+                <option value="en">ENG</option>
+                <option value="jp">JPN</option>
+            </select>
+            <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
